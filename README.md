@@ -1,1 +1,35 @@
 # CwiczeniaPAM
+<!-- SPIS_TREŚCI_START -->
+## 📚 Spis Ćwiczeń
+
+- [Projekt_zaliczeniowy-SQLite_v2](cwiczenia/Projekt_zaliczeniowy-SQLite_v2/README.md)
+- [Ćwiczenia_0_powtorka_v1](cwiczenia/Ćwiczenia_0_powtorka_v1/README.md)
+- [Ćwiczenia_2_androidstudio-linearlayout_v2](cwiczenia/Ćwiczenia_2_androidstudio-linearlayout_v2/README.md)
+- [Ćwiczenia_3_android_studio-relative_layout_v2](cwiczenia/Ćwiczenia_3_android_studio-relative_layout_v2/README.md)
+- [Ćwiczenia_4_i_5_android_studio-OnClick_Menu_Log_Toast_v5](cwiczenia/Ćwiczenia_4_i_5_android_studio-OnClick_Menu_Log_Toast_v5/README.md)
+- [Ćwiczenia_6_android_studio-AnalogClock_TextClock_Thread_Handler_Runnable_v1](cwiczenia/Ćwiczenia_6_android_studio-AnalogClock_TextClock_Thread_Handler_Runnable_v1/README.md)
+- [Ćwiczenia_7_8_android_studio-AlarmManager_MaterialSwitch_BroadcastReceiver_Notification_v5](cwiczenia/Ćwiczenia_7_8_android_studio-AlarmManager_MaterialSwitch_BroadcastReceiver_Notification_v5/README.md)
+- [Ćwiczenia_9_android_studio-onDraw_Canvas_Paint_graph_sinus_v4](cwiczenia/Ćwiczenia_9_android_studio-onDraw_Canvas_Paint_graph_sinus_v4/README.md)
+- [Ćwiczenia_10_android_studio-Navigation_Drawer_Calkowanie_wykres_sinus_v3](cwiczenia/Ćwiczenia_10_android_studio-Navigation_Drawer_Calkowanie_wykres_sinus_v3/README.md)
+- [Ćwiczenia_11_android_studio-Add_Fragment_Navigation_Drawer_Calkowanie_wykres_sinus_v3](cwiczenia/Ćwiczenia_11_android_studio-Add_Fragment_Navigation_Drawer_Calkowanie_wykres_sinus_v3/README.md)
+- [Ćwiczenia_12_android_studio_Camera_zapis_na_karte_pamieci_v2](cwiczenia/Ćwiczenia_12_android_studio_Camera_zapis_na_karte_pamieci_v2/README.md)
+- [Ćwiczenia_13_android_studio_CameraX_zapis_na_karte_pamieci_video_galeria_v1](cwiczenia/Ćwiczenia_13_android_studio_CameraX_zapis_na_karte_pamieci_video_galeria_v1/README.md)
+- [Ćwiczenia_14_android_studio_listView_SimpleAdapter_v3](cwiczenia/Ćwiczenia_14_android_studio_listView_SimpleAdapter_v3/README.md)
+- [Ćwiczenia_14_android_studio_listView_SimpleAdapter_v4](cwiczenia/Ćwiczenia_14_android_studio_listView_SimpleAdapter_v4/README.md)
+- [Ćwiczenia_15_android_studio_listView_ArrayAdapter_Spinner_v4](cwiczenia/Ćwiczenia_15_android_studio_listView_ArrayAdapter_Spinner_v4/README.md)
+- [Ćwiczenia_16_android_studio_SQLite_listView_SimpleAdapter_ArrayAdapter_Spinner_v3](cwiczenia/Ćwiczenia_16_android_studio_SQLite_listView_SimpleAdapter_ArrayAdapter_Spinner_v3/README.md)
+- [Ćwiczenia_17_android_studio_GPS_OpenStreetMaps_v6](cwiczenia/Ćwiczenia_17_android_studio_GPS_OpenStreetMaps_v6/README.md)
+- [Ćwiczenia_18_android_studio_Sensors_v4](cwiczenia/Ćwiczenia_18_android_studio_Sensors_v4/README.md)
+- [Ćwiczenia_19_android_studio_BlueTooth_v3](cwiczenia/Ćwiczenia_19_android_studio_BlueTooth_v3/README.md)
+- [Ćwiczenia_20_android_studio_Media_Player_Media_Recorder_Bottom_Navigation_Fragment_v1](cwiczenia/Ćwiczenia_20_android_studio_Media_Player_Media_Recorder_Bottom_Navigation_Fragment_v1/README.md)
+- [Ćwiczenia_21_android_studio_SMS_MMS_call_EMAIL_SEND_shortcut_v5](cwiczenia/Ćwiczenia_21_android_studio_SMS_MMS_call_EMAIL_SEND_shortcut_v5/README.md)
+- [Ćwiczenia_22_android_studio_RestAPI_RecyclerView_SwipeRefreshLayout_v3](cwiczenia/Ćwiczenia_22_android_studio_RestAPI_RecyclerView_SwipeRefreshLayout_v3/README.md)
+- [Ćwiczenia_23_android_studio_Foreground_service_v3](cwiczenia/Ćwiczenia_23_android_studio_Foreground_service_v3/README.md)
+- [Ćwiczenia_24_android_studio_AsyncTask_Download_image_ProgressBar_Notification_v4](cwiczenia/Ćwiczenia_24_android_studio_AsyncTask_Download_image_ProgressBar_Notification_v4/README.md)
+- [Ćwiczenia_25_android_studio_RecyclerView_GridLayout_v3](cwiczenia/Ćwiczenia_25_android_studio_RecyclerView_GridLayout_v3/README.md)
+- [Ćwiczenia_26_android_studio_Google_Maps_pick_location_codelabs_v1](cwiczenia/Ćwiczenia_26_android_studio_Google_Maps_pick_location_codelabs_v1/README.md)
+- [Ćwiczenia_27_android_studio_test_your_application_v1](cwiczenia/Ćwiczenia_27_android_studio_test_your_application_v1/README.md)
+- [Ćwiczenia_28_android_studio_wakacyjne_czerwiec_wrzesien_slider_radio_v1](cwiczenia/Ćwiczenia_28_android_studio_wakacyjne_czerwiec_wrzesien_slider_radio_v1/README.md)
+- [Ćwiczenia_29_android_studio_puzzle_v1](cwiczenia/Ćwiczenia_29_android_studio_puzzle_v1/README.md)
+
+<!-- SPIS_TREŚCI_END -->
