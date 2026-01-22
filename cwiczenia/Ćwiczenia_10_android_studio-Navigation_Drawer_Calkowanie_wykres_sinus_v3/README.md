@@ -50,12 +50,15 @@ New-> Layout Resource File (file name: **drawer_header**
 11. Powinieneś uzyskać:  
 ![](media/image4.png)  
 12. W activity_main.xml zmień layout na DrawerLayout  
-![](media/image5.png)
-![](media/image6.png)
+<p align="center"> <img src="media/image5.png" width="65%" /> </p>
+<p align="center"> <img src="media/image6.png" width="65%" /> </p>
+
 13. Dodaj w strings.xml:
 > ![](media/image7.png)
 14. W MainActivity.java w metodzie onCreate dodaj:
 ![](media/image8.png)
 15. Uruchom aplikację i przetestuj:
+
     ![](media/image9.png)
+
 16. KONIEC, część 2 w ćwiczeniach 11.
