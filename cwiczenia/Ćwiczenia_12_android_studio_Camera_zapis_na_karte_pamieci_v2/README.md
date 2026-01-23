@@ -27,13 +27,14 @@ w teams.*_
 
     ![](media/image3.png)  
 
-5.  Dodaj kolejną metodę po Ctrl+o:
+5.  Dodaj kolejną metodę po <kbd>Ctrl</kbd>+<kbd>o</kbd>:
 
     ![](media/image4.png)  
 
 6.  Dodaj do pliku AndroidManifest.xml
 
-    ![](media/image5.png)    
+  
+   ![img.png](media/image5_1.png)
 
 7.  Dodaj plik w res/xml/file_paths.xml
 
@@ -41,7 +42,8 @@ w teams.*_
 
 8.  Reszta z dokumentacji dla klasy Camera.
 ![img.png](media/image7.png)
-9.  Sprawdź na urządzeniu, czy zdjęcie zapisuje się w pamięci wew.
+9.  🚀Uruchom aplikację.
+10. Sprawdź na urządzeniu, czy zdjęcie zapisuje się w pamięci wew.
 ```text
     →Android -> data -> twoja aplikacja->files->Pictures
 ```
@@ -52,9 +54,11 @@ w teams.*_
 11. Dodaj zdjęcie do galerii.
 12. Dodatkowe zadania  
     a)  dodaj obsługę zapisu na kartę SD  
+
 ![img.png](media/image10.png)
-    b)  przeprowadź zapis video do pliku mp4  
-    ```xml
+ 
+   b)  przeprowadź zapis video do pliku mp4  
+   ```xml
     <VideoView
                     android:id="@+id/videoView"
                     android:layout_width="match_parent"
@@ -63,8 +67,12 @@ w teams.*_
                     android:padding="30dp">
 
                 </VideoView>
-    ```
+   ```
+
 ![image8.png](media/image8.png)
-    c)  odtwórz film w aplikacji  
+
+   c)  odtwórz film w aplikacji  
+
 ![image9.png](media/image9.png)
+
 13. KONIEC.🔚
