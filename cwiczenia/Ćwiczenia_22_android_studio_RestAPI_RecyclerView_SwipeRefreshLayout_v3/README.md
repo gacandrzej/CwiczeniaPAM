@@ -84,12 +84,16 @@ version)*\'
 
     b)utwórz aktywność dla innego API np.:
       - <https://rickandmortyapi.com/api/character/> 
+    
     ![img.png](media/image17.png)
+
     lub
       -  <https://api.chucknorris.io/jokes/random> lub
       -  <https://api.fbi.gov/wanted/v1/list> lub
       -  https://api.coinbase.com/v2/currencies/crypto
+    
     ![img.png](media/image18.png)
+    
     c)  Umieść dane osób na komponencie ListView lub RecyclerView,
         kliknięcie pozycji listy przenosi do nowej aktywności na której
         wyświetlisz zdjęcie i dane osoby
