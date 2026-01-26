@@ -13,7 +13,11 @@ w teams.
     <https://developer.android.com/reference/java/util/concurrent/Executor>
 
 
-3.  Stwórz klasę MyAsyncTask
+3. Efekt końcowy
+
+![img_1.png](media/image14.png)
+
+4. Stwórz klasę MyAsyncTask
 
 ![](media/image1.png)
 
@@ -27,8 +31,11 @@ w teams.
 
     ![](media/image4.png)
 7.  Przetestuj aplikację. Oczekiwany efekt:
+
 ![](media/image5.png)
+
 8.  Sprawdź zawartość strony: <https://randomuser.me/api>
+
 ![](media/image6.png)
 
 9.  Dodaj:
@@ -57,16 +64,20 @@ version)*\'
 
 15. Dodaj datę urodzenia oraz wiek tak, aby otrzymać:
 
+![img.png](media/image13.png)
+
 16. Samodzielnie dodaj pola: telefon, państwo, miasto i ulicę.
 
-17. Wykonaj:
+17. Dodaj nawigację dolną, możesz skorzystać z https://github.com/gacandrzej/BottomNav
+![img.png](media/image15.png)
+18. Wykonaj:
 
     a)  dodaj zmianę wartości, zdjęcia poprzez odświeżenie
         SwipeRefreshLayout **swipeRefreshLayout**;
         zastąp zdarzenie kliknięcia w przycisk na przeciągnięcie palcem
         **swipeRefreshLayout**.setOnRefreshListener(() -\>
 
-    b)  utwórz aktywność dla innego API np.:
+    b)utwórz aktywność dla innego API np.:
       - <https://rickandmortyapi.com/api/character/> lub
       -  <https://api.chucknorris.io/jokes/random> lub
       -  <https://api.fbi.gov/wanted/v1/list> lub
