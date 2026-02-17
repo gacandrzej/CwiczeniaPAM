@@ -64,12 +64,19 @@ w teams.*_
 
     
 6.  Uzupełnij MainActivity.java:
+
     ![](media/image3.png)
+
 7.  Dalej, szkielet dla onCreate():
+
 ![](media/image4.png)
+
 ![](media/image5.png)
+
 8.  Dodaj i uzupełnij metodę getOutputDirectory() - rozbuduj ją :
+
 ![](media/image6.jpeg)
+
 9.  Dodaj do AndroidManifest.xml
 
     ![img.png](media/image7_1.png)
@@ -92,6 +99,7 @@ w teams.*_
 
 14. Sprawdź, czy zdjęcie zapisuje się w pamięci wew.→Android→data→
     com.example.CameraX-\>files-\>Pictures
+
 15. Dodaj zdjęcie do galerii.
 
 ![img.png](media/image15.png)
@@ -102,7 +110,7 @@ w teams.*_
 
     b)  przeprowadź zapis video do pliku mp4
 
-![img.png](media/image16.png)  
+![img.png](media/image16.png)    
     c)  dodaj obsługę bokeh, night,:
 
         https://developer.android.com/training/camerax/vendor-extensions
@@ -116,4 +124,4 @@ selector = extensionsManager.getExtensionEnabledCameraSelector(selector, Extensi
                         }
   ```
 
-17. KONIEC.
+17. KONIEC.🔚
