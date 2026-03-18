@@ -18,6 +18,9 @@ w teams.
    ![image1.png](media/image1.png)
 
 1. Dodaj zależności.
+
+   ![dependecies](../../media/2026-03-18-10-06-01.png)
+
 1. Docelowo chcemy uzyskać coś na kształt, wybierz tematykę:
 1. Dodaj w activity_main.xml listę
 
@@ -27,9 +30,23 @@ w teams.
 
   ![image3](media/image3.png)
 
-  ![image4](media/image4.png)
-
 1. Nazwy umieść w string-array:
+
+   ![image4](media/image4.png)
+
+   ```xml
+   <string-array name="dogsDescription">
+        <item>Mały, energiczny pies o jedwabistej sierści. Choć wyglądem przypomina psa kanapowego, zachowuje instynkt i odwagę prawdziwego teriera.</item>
+        <item>Wytrzymały i pojętny pies o szorstkiej sierści. Znany z radosnego usposobienia, dużej pewności siebie oraz zamiłowania do kopania i zabaw.</item>
+        <item>Spokojniejszy od innych terierów, o charakterystycznej sylwetce i jedwabistej szacie. Jest lojalny, łagodny wobec dzieci i łatwy w prowadzeniu.</item>
+        <item>Długowłosa odmiana najmniejszego psa świata. Bardzo przywiązany do właściciela, odważny i czujny, o wielkiej osobowości w małym ciele.</item>
+        <item>Jeden z najpopularniejszych psów rodzinnych. Wyjątkowo łagodny, inteligentny i cierpliwy. Uwielbia aportowanie, wodę i kontakt z ludźmi.</item>
+        <item>Potężny pies zaprzęgowy o gęstej sierści. Niezależny, bardzo wytrzymały i przyjacielski, ale wymagający dużo ruchu i konsekwentnego wychowania.</item>
+        <item>Wysoce inteligentny i elegancki pies o kędzierzawej sierści. Szybko się uczy, jest aktywny i świetnie sprawdza się w psich sportach oraz jako pies towarzyszący.</item>
+        <item>Cavalier King Charles Spaniel to pies o wyjątkowo łagodnym i radosnym usposobieniu. Uwielbia towarzystwo ludzi, jest cierpliwy i bardzo wrażliwy.</item>
+        <item>Wszechstronny pies o przyjaznej naturze. Znany z doskonałego węchu, inteligencji i chęci do pracy. Idealny towarzysz rodziny i oddany pomocnik.</item>
+    </string-array>
+   ```
 
 1. Uzupełnij MainActivity.java:
 
