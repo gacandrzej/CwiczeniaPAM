@@ -21,14 +21,13 @@ w teams.
 
    ![dependecies](../../media/2026-03-18-10-06-01.png)
 
-1. Docelowo chcemy uzyskać coś na kształt, wybierz tematykę:
 1. Dodaj w activity_main.xml listę
 
    ![image2](media/image2.png)
 
 1. Dodaj pliki zdjęć do res ... .
 
-  ![image3](media/image3.png)
+   ![image3](media/image3.png)
 
 1. Nazwy umieść w string-array:
 
