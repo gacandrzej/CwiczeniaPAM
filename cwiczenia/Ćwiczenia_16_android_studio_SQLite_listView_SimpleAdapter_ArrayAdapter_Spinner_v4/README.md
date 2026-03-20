@@ -32,7 +32,9 @@ w teams.
 1. Wykorzystaj do zbudowania interfejsu użytkownika ćwiczenia 15.
 
     <https://developer.android.com/guide/topics/ui/controls/spinner>
+
     <https://developer.android.com/guide/topics/resources/string-resource#java>
+
     <https://developer.android.com/reference/android/widget/ListView#setAdapter(android.widget.ListAdapter>)
 
 1. Stwórz podstawowe struktury dla bazy oraz ją utwórz:
