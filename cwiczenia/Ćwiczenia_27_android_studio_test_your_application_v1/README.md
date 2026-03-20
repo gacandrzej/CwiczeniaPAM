@@ -28,7 +28,7 @@ w teams.
 
    app/src/androidTest/java
 
-1. Użyj Ctrl+Shift+T będąc na nazwie klasy, aby wygenero
+1. Użyj Ctrl+Shift+T będąc na nazwie klasy, aby wygenerować test.
 
 1. Utwórz klasę:
 
@@ -84,8 +84,10 @@ w teams.
    ```
 
 1. Utwórz klasę LoginUiTest.java.
+
    Testujemy scenariusz:
-   użytkownik wpisuje błędne hasło -> klika przycisk -> widzi komunikat o błędzie.
+
+   - użytkownik wpisuje błędne hasło -> klika przycisk -> widzi komunikat o błędzie.
 
    ```java
     @RunWith(AndroidJUnit4.class)
@@ -105,6 +107,140 @@ w teams.
             // Sprawdź czy TextView wyświetla odpowiedni błąd
             onView(withId(R.id.error_message))
                     .check(matches(withText("Hasło jest zbyt krótkie")));
+        }
+    }
+   ```
+
+1. Architektura pod testy. Refaktoryzacja ćwiczeń 14.
+
+  Aby przetestować logikę dodawania produktów, warto wydzielić ją z MainActivity
+  do osobnej klasy (Separation of Concerns).
+
+  Dzięki temu możemy napisać Unit Test bez uruchamiania emulatora.
+
+1. Klasa: ProductManager.java (Logic)
+
+   ```java
+    public class ProductManager {
+        private final List<Map<String, Object>> fruitsList = new ArrayList<>();
+
+        public void addProduct(String name, String description, int imageResId) {
+            if (name == null || name.isEmpty()) throw new IllegalArgumentException("Name cannot be empty");
+            Map<String, Object> item = new HashMap<>();
+            item.put("name", name);
+            item.put("description", description);
+            item.put("image", imageResId);
+            fruitsList.add(item);
+        }
+
+        public int getCount() { return fruitsList.size(); }
+        public List<Map<String, Object>> getList() { return fruitsList; }
+    }
+   ```
+
+1. Zależności:
+
+   ```xml
+      dependencies {
+        // Podstawowe biblioteki Android UI
+        implementation(libs.appcompat)
+        implementation(libs.material)
+        implementation(libs.constraintlayout)
+
+        // --- TESTOWANIE ---
+        
+        // Unit Testing (Local - uruchamiane na komputerze)
+        testImplementation(libs.junit)
+
+        // Instrumented Testing (Android - uruchamiane na emulatorze/telefonie)
+        androidTestImplementation(libs.androidx.junit)
+        androidTestImplementation(libs.androidx.espresso.core)
+        
+        // Opcjonalne: Espresso contrib (pomocne przy testowaniu ListView/RecyclerView)
+        androidTestImplementation("androidx.test.espresso:espresso-contrib:3.6.1")
+
+    }
+
+   ```
+
+1. Testy Jednostkowe (Unit Tests)
+
+   Użyj skrótu Ctrl+Shift+T na nazwie klasy ProductManager,
+   aby wygenerować test. Sprawdzamy sytuacje brzegowe
+   (tzw. edge cases).
+
+   ```java
+    import org.junit.Test;
+    import static org.junit.Assert.*;
+
+    public class ProductManagerTest {
+        
+        @Test
+        public void addProduct_validData_increasesSize() {
+            ProductManager manager = new ProductManager();
+            manager.addProduct("Jabłko", "Czerwone", 123);
+            assertEquals(1, manager.getCount());
+        }
+
+        @Test(expected = IllegalArgumentException.class)
+        public void addProduct_emptyName_throwsException() {
+            ProductManager manager = new ProductManager();
+            manager.addProduct("", "Opis", 123);
+        }
+    }
+   ```
+
+1. Testy UI (Instrumented Tests / Espresso)
+
+   W kodzie mamy AlertDialog i FloatingActionButton.
+
+   Testujemy pełny scenariusz użytkownika:
+
+   ```text
+   Kliknięcie FAB 
+
+   -> Wpisanie danych 
+
+   -> Potwierdzenie 
+
+   -> Sprawdzenie czy element jest na liście.
+   ```
+
+1. MainActivityTest:
+
+   ```java
+    @RunWith(AndroidJUnit4.class)
+    public class MainActivityTest {
+
+        @Rule
+        public ActivityScenarioRule<MainActivity> activityRule = 
+                new ActivityScenarioRule<>(MainActivity.class);
+
+        @Test
+        public void testAddProductFlow() {
+            // 1. Kliknij w FAB Add
+            onView(withId(R.id.fabAdd)).perform(click());
+
+            // 2. Wpisz dane w Dialogu
+            onView(withId(R.id.editTextProductName)).perform(typeText("Nowy Produkt"));
+            onView(withId(R.id.editTextProductDescription)).perform(typeText("Opis testowy"), closeSoftKeyboard());
+
+            // 3. Kliknij "Dodaj" w AlertDialog
+            onView(withText("Dodaj")).perform(click());
+
+            // 4. Sprawdź, czy nowy element jest widoczny na liście
+            onView(withText("Nowy Produkt")).check(matches(isDisplayed()));
+        }
+
+        @Test
+        public void testDeleteProduct_showsToastWhenNoSelection() {
+            // Kliknij usuń bez zaznaczenia
+            onView(withId(R.id.fabDelete)).perform(click());
+            
+            // Sprawdź czy pojawił się Toast (wymaga customowego Matchera lub sprawdzania widoczności)
+            onView(withText("Wybierz element do usunięcia"))
+                .inRoot(withDecorView(not(is(activityRule.getScenario())))) // Specyficzne dla Toastów
+                .check(matches(isDisplayed()));
         }
     }
    ```
