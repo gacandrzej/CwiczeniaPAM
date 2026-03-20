@@ -113,10 +113,10 @@ w teams.
 
 1. Architektura pod testy. Refaktoryzacja ćwiczeń 14.
 
-  Aby przetestować logikę dodawania produktów, warto wydzielić ją z MainActivity
-  do osobnej klasy (Separation of Concerns).
+   Aby przetestować logikę dodawania produktów, warto wydzielić ją z MainActivity
+   do osobnej klasy (Separation of Concerns).
 
-  Dzięki temu możemy napisać Unit Test bez uruchamiania emulatora.
+   Dzięki temu możemy napisać Unit Test bez uruchamiania emulatora.
 
 1. Klasa: ProductManager.java (Logic)
 
@@ -252,4 +252,4 @@ w teams.
     - dodaj nową aktywność
     - dodaj testy
   
-1. KONIEC.
+1. KONIEC.🔚
