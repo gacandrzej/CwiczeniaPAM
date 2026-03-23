@@ -105,7 +105,7 @@ w teams.
 
       lub
 
-      - <https://www.apicountries.com/alpha/IL>
+      - <https://www.apicountries.com/countries>
 
       - <https://api.fbi.gov/wanted/v1/list>
 
