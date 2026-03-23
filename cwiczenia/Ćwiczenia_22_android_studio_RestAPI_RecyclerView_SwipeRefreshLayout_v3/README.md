@@ -2,9 +2,11 @@
 
 📔 Na koniec zajęć prześlij pliki źródłowe (.xml, .java)+ obrazek do zasobu
 w teams.
-1.  Utwórz projekt o nazwie RestApi na podstawie Empty Activity, dobierz
+
+1. Utwórz projekt o nazwie RestApi na podstawie Empty Activity, dobierz
     odpowiednie API ( 28 -- Android 9).
-2.  Otwórz dokumentację:
+
+1. Otwórz dokumentację:
 
     <https://developer.android.com/reference/org/json/JSONArray>
     <https://developer.android.com/reference/org/json/JSONObject>
@@ -12,70 +14,81 @@ w teams.
     <https://developer.android.com/reference/java/util/concurrent/package-summary>
     <https://developer.android.com/reference/java/util/concurrent/Executor>
 
+1. Efekt końcowy
 
-3. Efekt końcowy
+   ![img_1.png](media/image14.png)
 
-![img_1.png](media/image14.png)
+1. Stwórz klasę MyAsyncTask
 
-4. Stwórz klasę MyAsyncTask
+   ![image1](media/image1.png)
 
-![](media/image1.png)
+1. Zaimplementuj metodę doInBackground(), <kbd>Alt</kbd>+<kbd>Enter</kbd>
 
-4.  Zaimplementuj metodę doInBackground(), <kbd>Alt</kbd>+<kbd>Enter</kbd>
-![](media/image2.png)
-5.  Zaimplementuj pozostałe metody :
+   ![image2](media/image2.png)
 
-![](media/image3.png)
+1. Zaimplementuj pozostałe metody :
 
+   ![image3](media/image3.png)
 
-6.  Wywołaj wątek
+1. Wywołaj wątek
 
-    ![](media/image4.png)
-7.  Przetestuj aplikację. Oczekiwany efekt:
+   ![image4](media/image4.png)
 
-![](media/image5.png)
+1. Przetestuj aplikację. Oczekiwany efekt:
 
-8.  Sprawdź zawartość strony: <https://randomuser.me/api>
+   ![image5](media/image5.png)
 
-![](media/image6.png)
+1. Sprawdź zawartość strony: <https://randomuser.me/api>
 
-9.  Dodaj:
+   ![image6](media/image6.png)
 
-![](media/image7.png)
-10. Odczytaj składowe
+1. Dodaj:
 
-![](media/image8.png)
+   ![image7](media/image7.png)
 
-11. Uzupełnij metodę onProgressUpdate
-![](media/image9.png)
-12. Przetestuj aplikację:
+1. Odczytaj składowe
 
-![](media/image10.png)
+   ![image8](media/image8.png)
 
-13. Krok 3: załaduj zdjęcie:
+1. Uzupełnij metodę onProgressUpdate
+
+   ![image9](media/image9.png)
+
+1. Przetestuj aplikację:
+
+   ![image10](media/image10.png)
+
+1. Krok 3: załaduj zdjęcie:
+
     <https://developer.android.com/topic/performance/graphics/load-bitmap>
-<https://square.github.io/picasso/>
-#### GRADLE
-implementation \'com.squareup.picasso:picasso:*(insert latest
-version)*\'
-![](media/image11.png)
-14. Załaduj zdjęcie:
 
-![](media/image12.png)
+    <https://square.github.io/picasso/>
 
-15. Dodaj datę urodzenia oraz wiek tak, aby otrzymać:
+   ```xml
+   implementation \'com.squareup.picasso:picasso:*(insert latest version)*\'
+   ```
 
-![img.png](media/image13.png)
+   ![image11](media/image11.png)
 
-16. Samodzielnie dodaj pola: telefon, państwo, miasto i ulicę.
+1. Załaduj zdjęcie:
 
-17. Dodaj nawigację dolną, możesz skorzystać z https://github.com/gacandrzej/BottomNav
-![img.png](media/image15.png)
-18. Po kliknięciu w pozycję listy otwiera się nowy widok:
+   ![image12](media/image12.png)
 
-![img.png](media/image16.png)
+1. Dodaj datę urodzenia oraz wiek tak, aby otrzymać:
 
-19. Wykonaj:
+   ![img.png](media/image13.png)
+
+1. Samodzielnie dodaj pola: telefon, państwo, miasto i ulicę.
+
+1. Dodaj nawigację dolną, możesz skorzystać z <https://github.com/gacandrzej/BottomNav>
+
+   ![img.png](media/image15.png)
+
+1. Po kliknięciu w pozycję listy otwiera się nowy widok:
+
+   ![img.png](media/image16.png)
+
+1. Wykonaj:
 
     a)  dodaj zmianę wartości, zdjęcia poprzez odświeżenie
         SwipeRefreshLayout **swipeRefreshLayout**;
@@ -83,17 +96,17 @@ version)*\'
         **swipeRefreshLayout**.setOnRefreshListener(() -\>
 
     b)utwórz aktywność dla innego API np.:
-      - <https://rickandmortyapi.com/api/character/> 
-    
+      - <https://rickandmortyapi.com/api/character/>
+
     ![img.png](media/image17.png)
 
     lub
-      -  <https://api.chucknorris.io/jokes/random> lub
-      -  <https://api.fbi.gov/wanted/v1/list> lub
-      -  https://api.coinbase.com/v2/currencies/crypto
-    
+      - lub
+      - <https://api.fbi.gov/wanted/v1/list> lub
+      - <https://api.coinbase.com/v2/currencies/crypto>
+
     ![img.png](media/image18.png)
-    
+
     c)  Umieść dane osób na komponencie ListView lub RecyclerView,
         kliknięcie pozycji listy przenosi do nowej aktywności na której
         wyświetlisz zdjęcie i dane osoby
@@ -105,5 +118,6 @@ version)*\'
     f)  zrealizuj ćwiczenie w oparciu o:
 
       - <https://developer.android.com/reference/java/util/concurrent/package-summary>
-      -  <https://developer.android.com/reference/java/util/concurrent/Executor>
-18. KONIEC.😀
+      - <https://developer.android.com/reference/java/util/concurrent/Executor>
+
+1. KONIEC.😀
