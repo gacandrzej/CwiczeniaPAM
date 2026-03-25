@@ -175,10 +175,57 @@ w teams.
             assertEquals("Rick Sanchez", name);
         }
     }
+    ```
 
-   ```
+     - test adaptera
 
-   - Test instrumentacyjny fragmentu
+      dodaj zależność:
+
+      ```xml
+      testImplementation("org.mockito:mockito-core:5.6.0")
+      ```
+
+     ```java
+     package andrzej.gac.restapibottomnavfragment.adapter;
+
+      import static org.junit.jupiter.api.Assertions.*;
+      import static org.mockito.Mockito.mock;
+
+      import androidx.fragment.app.FragmentManager;
+
+      import org.junit.Test;
+      import org.junit.jupiter.api.AfterEach;
+      import org.junit.jupiter.api.BeforeEach;
+
+      import java.util.ArrayList;
+      import java.util.List;
+
+      import andrzej.gac.restapibottomnavfragment.model.RickAndMortyModel;
+
+      public class RickAndMortyAdapterTest {
+
+          @BeforeEach
+          void setUp() {
+          }
+
+          @AfterEach
+          void tearDown() {
+          }
+
+          @Test
+          public void testAdapterItemCount() {
+              List<RickAndMortyModel> list = new ArrayList<>();
+              list.add(new RickAndMortyModel("Rick", "Alive", "Human", "Male", "Earth", "Citadel", "url"));
+
+              RickAndMortyAdapter adapter = new RickAndMortyAdapter(list, mock(FragmentManager.class));
+
+              assertEquals(1, adapter.getItemCount());
+          }
+
+      }
+     ```
+
+- Test instrumentacyjny fragmentu
 
      ```xml
         // Unit tests
