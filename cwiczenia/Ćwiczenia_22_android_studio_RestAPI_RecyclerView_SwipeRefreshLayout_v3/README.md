@@ -233,6 +233,23 @@ w teams.
       }
      ```
 
+     W /src/debug utwórz plik AndroidManifest.xml:
+
+     ```xml
+     <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+     package="andrzej.gac.restapibottomnavfragment">
+
+      <application
+        android:theme="@style/Theme.RestAPIbottomNavFragment">
+
+        <activity
+            android:name="androidx.fragment.app.testing.EmptyFragmentActivity"
+            android:exported="true" />
+       </application>
+
+     </manifest>
+     ```
+
      ![test](../../media/2026-03-25-16-30-56.png)
 
 1. KONIEC.😀
