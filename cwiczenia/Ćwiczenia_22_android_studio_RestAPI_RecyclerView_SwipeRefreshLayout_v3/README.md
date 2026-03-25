@@ -97,7 +97,7 @@ w teams.
         zastąp zdarzenie kliknięcia w przycisk na przeciągnięcie palcem
         **swipeRefreshLayout**.setOnRefreshListener(() -\>
 
-    - utwórz aktywność dla innego API np.:
+    - utwórz aktywność dla innego API np., zastąp AsyncTask przez Executor:
 
        <https://rickandmortyapi.com/api/character/>
 
@@ -125,5 +125,114 @@ w teams.
 
       - <https://developer.android.com/reference/java/util/concurrent/package-summary>
       - <https://developer.android.com/reference/java/util/concurrent/Executor>
+
+      ```java
+      Executor executor = Executors.newSingleThreadExecutor();
+
+        newCharakterButton.setOnClickListener(l -> executor.execute(
+                new RickAndMorty(mainActivity, "https://rickandmortyapi.com/api/character", rickAndMortyAdapter)
+        ));
+      ```
+
+1. Dodaj testy:
+
+   - czy JSON poprawnie się parsuje
+     Pamiętaj o dodaniu jsona do testów
+
+      ```xml
+      dependencies {
+        testImplementation("org.json:json:20251224")
+        }
+
+      ```
+
+   ```java
+   package andrzej.gac.restapibottomnavfragment.task;
+
+    import org.json.JSONArray;
+    import org.json.JSONObject;
+    import org.junit.Test;
+
+    import static org.junit.Assert.assertEquals;
+
+    public class RickAndMortyRunnableTest {
+
+        @Test
+        public void testParseJson() throws Exception {
+            String fakeJson = "{ \"results\": [" +
+                    "{ \"name\":\"Rick Sanchez\", \"status\":\"Alive\", \"species\":\"Human\", " +
+                    "\"gender\":\"Male\", \"origin\":{\"name\":\"Earth\"}, " +
+                    "\"location\":{\"name\":\"Citadel\"}, " +
+                    "\"image\":\"url\" }]}";
+
+            JSONObject jsonObject = new JSONObject(fakeJson);
+            JSONArray jsonArray = jsonObject.getJSONArray("results");
+
+            JSONObject person = jsonArray.getJSONObject(0);
+
+            String name = person.getString("name");
+
+            assertEquals("Rick Sanchez", name);
+        }
+    }
+
+   ```
+
+   - Test instrumentacyjny fragmentu
+
+     ```xml
+        // Unit tests
+        testImplementation("junit:junit:4.13.2")
+        testImplementation("org.junit.jupiter:junit-jupiter:6.0.3")
+
+        // Instrumented tests
+        androidTestImplementation("androidx.test:core:1.5.0")
+        androidTestImplementation("androidx.test:runner:1.5.2")
+        androidTestImplementation("androidx.test:rules:1.5.0")
+        androidTestImplementation("androidx.test.ext:junit:1.1.5")
+
+        androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+        androidTestImplementation("androidx.test.espresso:espresso-contrib:3.5.1")
+        androidTestImplementation("androidx.test.espresso:espresso-intents:3.5.1")
+
+        // FragmentScenario
+        debugImplementation("androidx.fragment:fragment-testing:1.6.2")
+
+     ```
+
+     ```java
+     package andrzej.gac.restapibottomnavfragment;
+
+      import androidx.fragment.app.testing.FragmentScenario;
+      import androidx.test.ext.junit.runners.AndroidJUnit4;
+
+      import org.junit.Test;
+      import org.junit.runner.RunWith;
+
+      import andrzej.gac.restapibottomnavfragment.fragments.RickAndMortyListFragment;
+
+      import static androidx.test.espresso.Espresso.onView;
+      import static androidx.test.espresso.matcher.ViewMatchers.*;
+      import static androidx.test.espresso.assertion.ViewAssertions.*;
+
+      @RunWith(AndroidJUnit4.class)
+      public class RickAndMortyListFragmentTest {
+
+          @Test
+          public void testRecyclerViewDisplayed() {
+
+              FragmentScenario.launchInContainer(
+                      RickAndMortyListFragment.class,
+                      null,
+                      R.style.Theme_RestAPIbottomNavFragment
+              );
+
+              onView(withId(R.id.recycler_view))
+                      .check(matches(isDisplayed()));
+          }
+      }
+     ```
+
+     ![test](../../media/2026-03-25-16-30-56.png)
 
 1. KONIEC.😀
