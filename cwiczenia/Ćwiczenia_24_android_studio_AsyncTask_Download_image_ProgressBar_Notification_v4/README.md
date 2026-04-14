@@ -136,6 +136,10 @@ w teams.
 
    ![image7](media/image7.png)
 
+1. Zezwól na powiadomnienia:
+
+   ![allow_notification](../../media/2026-04-14-09-47-42.png)
+
 1. Sprawdzenie logCata:
 
    ![image8](media/image8.png)
