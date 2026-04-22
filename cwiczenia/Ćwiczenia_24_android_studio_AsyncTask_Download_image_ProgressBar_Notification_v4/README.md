@@ -148,7 +148,7 @@ w teams.
 
    ![image9](media/image9.png)
 
-   Widok z ProgressDialog:
+   Widok z ProgressDialog dla pixel API 26:
 
    ![image10](media/image10.png)
 
