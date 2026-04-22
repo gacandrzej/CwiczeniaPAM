@@ -1,6 +1,6 @@
 # Ćwiczenia 15 -- Android studio -- BaseAdapter, Spinner
 
-💡Na koniec zajęć prześlij pliki źródłowe (.xml, .java)+ obrazek do zasobu
+💡Na koniec zajęć prześlij pliki źródłowe (.xml, .java) + screeny do zasobu
 w teams.
 
 1. Utwórz projekt o nazwie ArrayAdapter na podstawie Empty Activity,
@@ -11,6 +11,8 @@ w teams.
    <https://developer.android.com/guide/topics/ui/controls/spinner>
 
    <https://developer.android.com/guide/topics/resources/string-resource#java>
+
+   <https://developer.android.com/reference/android/widget/BaseAdapter>
 
 1. Docelowo chcemy uzyskać :
 
@@ -58,7 +60,7 @@ w teams.
 
    ![image12](media/image12.png)
 
-1. Sprawdź wbudowane metody:
+1. Sprawdź czy posiadasz wbudowane metody:
 
    ![image13](media/image13.png)
 
@@ -78,7 +80,7 @@ w teams.
 
    - utwórz przycisk dodający nowy element do listy
 
-   - zachowaj całą listę w ShredPreferences, sprawdź stan linty po
+   - zachowaj całą listę w ShredPreferences, sprawdź stan listy po
      rotacji urządzenia
 
    - przebuduj projekt tworząc klasę i listę, utwórz stosowny adapter
