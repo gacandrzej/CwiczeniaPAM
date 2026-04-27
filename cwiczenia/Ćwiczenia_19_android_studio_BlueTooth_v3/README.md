@@ -23,7 +23,9 @@ w teams.
 
 1. AndroidManifest.xml:
 
-![ image3.png ](media/image3.png)
+   ![image3.png](media/image3.png)
+
+   ![uprawnienia_bluetooth](../../media/2026-04-27-11-05-37.png)
 
 1. Przygotuj w activity_main.xml:
 
