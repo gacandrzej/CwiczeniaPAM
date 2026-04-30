@@ -192,6 +192,6 @@
 
 1. Po kliknięciu w pozycję listy, sparuj głośnik
 
- ![widok_okna_parowania](../../media/2026-04-30-08-19-46.png)
+   ![widok_okna_parowania](../../media/2026-04-30-08-19-46.png)
 
 1. KONIEC. 🔚
