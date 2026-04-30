@@ -11,6 +11,8 @@
     <https://developer.android.com/guide/topics/connectivity/bluetooth/find-bluetooth-devices>
     <https://developer.android.com/guide/topics/connectivity/bluetooth/transfer-data>
 
+1. Pobierz i rozpakuj ![android_icons](android_icons.zip)
+
 1. AndroidManifest.xml:
 
    ```xml
