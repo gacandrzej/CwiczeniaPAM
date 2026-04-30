@@ -32,4 +32,5 @@
 - [Ćwiczenia_28_android_studio_wakacyjne_czerwiec_wrzesien_slider_radio_v1](cwiczenia/Ćwiczenia_28_android_studio_wakacyjne_czerwiec_wrzesien_slider_radio_v1/README.md)
 - [Ćwiczenia_29_android_studio_puzzle_v1](cwiczenia/Ćwiczenia_29_android_studio_puzzle_v1/README.md)
 
+- [Ćwiczenia_30_bluetooth_parowanie_v1](cwiczenia/Ćwiczenia_30_android_studio_puzzle_v1/README.md)
 <!-- SPIS_TREŚCI_END -->
