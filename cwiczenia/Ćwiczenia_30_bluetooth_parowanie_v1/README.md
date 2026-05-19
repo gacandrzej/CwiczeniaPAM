@@ -199,6 +199,57 @@
    bluetoothAdapter.startDiscovery();
    ```
 
+1. BluetoothBroadcastReceiver.java – odpowiada za odbiór zdarzeń systemowych
+
+   ```java
+        public class BluetoothBroadcastReceiver extends BroadcastReceiver {
+          // Interfejs umożliwiający przekazanie znalezionego urządzenia
+          public interface OnDeviceFoundListener {
+              void onDeviceFound(BluetoothDevice device);
+          }
+
+          private OnDeviceFoundListener listener;
+
+          public BluetoothBroadcastReceiver(OnDeviceFoundListener listener) {
+              this.listener = listener;
+          }
+
+          @Override
+          public void onReceive(Context context, Intent intent) {
+              String action = intent.getAction();
+              if (BluetoothDevice.ACTION_FOUND.equals(action)) {
+                  BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+                  if (device != null && listener != null) {
+                      listener.onDeviceFound(device);
+                  }
+              }
+
+              if (BluetoothDevice.ACTION_BOND_STATE_CHANGED.equals(action)) {
+                  BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+                  int bondState = intent.getIntExtra(BluetoothDevice.EXTRA_BOND_STATE, BluetoothDevice.ERROR);
+
+                  switch (bondState) {
+                      case BluetoothDevice.BOND_BONDED:
+                          // Urządzenie sparowane!
+                          Log.v("111","Urządzenie sparowane: " );
+                          break;
+                      case BluetoothDevice.BOND_BONDING:
+                          // W trakcie parowania...
+                          Log.v("111","W trakcie parowania...");
+                          break;
+                      case BluetoothDevice.BOND_NONE:
+                          // Parowanie odrzucone lub usunięte
+                          Log.v("111","Parowanie odrzucone lub usunięte");
+                          break;
+                  }
+              }
+
+          }
+
+      }
+
+   ```
+
 1. BluetoothDeviceAdapter.java – adapter dla RecyclerView, który korzysta z modelu DeviceModel, aby wyświetlić listę urządzeń wraz z nazwą, adresem i ikoną. Obsługuje również kliknięcia na elementach listy. Fragment kodu:
 
    ```java
@@ -311,6 +362,42 @@
             btnStart.setEnabled(false);
             btnStop.setEnabled(true);
         });
+   ```
+
+1. DeviceTypeMapper:
+
+   ```java
+   public class DeviceTypeMapper {
+
+    /**
+     * Zwraca odpowiednią ikonę dla urządzenia na podstawie jego klasy Bluetooth.
+     */
+    public static int getIconForDevice(Context context, BluetoothDevice device) {
+        // Sprawdzenie uprawnień (wymagane dla getBluetoothClass() na Android 12+)
+        if (ActivityCompat.checkSelfPermission(context, Manifest.permission.BLUETOOTH_CONNECT)
+                != PackageManager.PERMISSION_GRANTED) {
+            return R.drawable.bluetooth; // Ikona domyślna
+        }
+
+        BluetoothClass btClass = device.getBluetoothClass();
+        if (btClass != null) {
+            int deviceClass = btClass.getDeviceClass();
+
+            switch (deviceClass) {
+                case BluetoothClass.Device.AUDIO_VIDEO_LOUDSPEAKER:
+                case BluetoothClass.Device.AUDIO_VIDEO_HIFI_AUDIO:
+                case BluetoothClass.Device.AUDIO_VIDEO_HEADPHONES:
+                case BluetoothClass.Device.AUDIO_VIDEO_WEARABLE_HEADSET:
+                    return R.drawable.headphones;
+
+                case BluetoothClass.Device.PERIPHERAL_KEYBOARD:
+                    return R.drawable.keyboard;
+
+                case BluetoothClass.Device.PERIPHERAL_POINTING:
+                    return R.drawable.mouse;
+
+                case BluetoothClass.Device.COMPUTER_LAPTOP:
+                    return R.drawable.laptop_mac;
    ```
 
 1. Po kliknięciu w pozycję listy, sparuj głośnik
