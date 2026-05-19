@@ -147,6 +147,76 @@
 
    ![struktura_projektu_bluetooth](../../media/2026-04-30-11-58-50.png)
 
+1. Klasa DeviceModel – model danych, który reprezentuje urządzenie. Zawiera pola na nazwę, adres oraz identyfikator zasobu ikony. Dzięki temu łatwiej jest przypisać odpowiednią ikonę (np. na podstawie typu urządzenia).
+
+   ```java
+   public class DeviceModel {
+    private String name;
+    private String address;
+    private int iconResId; // identyfikator zasobu graficznego (np. R.drawable.ic_headphones)
+   ```
+
+   Dodaj konstruktor oraz gettery i settery.
+
+1. Klasa BluetoothConnectionManager - implementuje interfejs
+
+   ```java
+   public interface BluetoothScanInterface {
+    void startScan();
+    void stopScan();
+   }
+   ```
+
+   i zarządza procesem skanowania, rejestrując oraz wyrejestrowując BroadcastReceiver.
+
+   ```java
+   public class BluetoothConnectionManager implements BluetoothScanInterface {
+
+    private Context context;
+    private BluetoothAdapter bluetoothAdapter;
+    private BluetoothBroadcastReceiver broadcastReceiver;
+    private boolean isScanning = false;
+
+    public BluetoothConnectionManager(Context context, BluetoothBroadcastReceiver.OnDeviceFoundListener listener) {
+        this.context = context.getApplicationContext();
+        // Pobranie adaptera Bluetooth
+        BluetoothManager manager = (BluetoothManager) context.getSystemService(Context.BLUETOOTH_SERVICE);
+        bluetoothAdapter = manager.getAdapter();
+        // Utworzenie instancji oddzielnego BroadcastReceivera
+        broadcastReceiver = new BluetoothBroadcastReceiver(listener);
+
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(BluetoothDevice.ACTION_FOUND);
+        filter.addAction(BluetoothDevice.ACTION_BOND_STATE_CHANGED);
+        filter.addAction(BluetoothAdapter.ACTION_DISCOVERY_FINISHED);
+        this.context.registerReceiver(broadcastReceiver, filter);
+    }
+   ```
+
+   w metodzie startScan:
+
+   ```java
+   bluetoothAdapter.startDiscovery();
+   ```
+
+1. BluetoothDeviceAdapter.java – adapter dla RecyclerView, który korzysta z modelu DeviceModel, aby wyświetlić listę urządzeń wraz z nazwą, adresem i ikoną. Obsługuje również kliknięcia na elementach listy. Fragment kodu:
+
+   ```java
+   public class BluetoothDeviceAdapter extends RecyclerView.Adapter<BluetoothDeviceAdapter.ViewHolder> {
+
+    private List<DeviceModel> deviceList;
+    private OnItemClickListener listener;
+
+    public interface OnItemClickListener {
+        void onItemClick(DeviceModel device);
+    }
+
+    public BluetoothDeviceAdapter(List<DeviceModel> deviceList, OnItemClickListener listener) {
+        this.deviceList = deviceList;
+        this.listener = listener;
+    }
+   ```
+
 1. Zawartość elementu listy RecyclerView:
 
    ```xml
@@ -188,6 +258,20 @@
             android:textSize="14sp" />
 
     </RelativeLayout>
+   ```
+
+1. Obsługa przycisków, np.:
+
+   ```java
+   Button btnStart = findViewById(R.id.btnStartScan);
+
+        btnStart.setOnClickListener(v -> {
+            if (bluetoothConnectionManager != null) {
+                bluetoothConnectionManager.startScan();
+            }
+            btnStart.setEnabled(false);
+            btnStop.setEnabled(true);
+        });
    ```
 
 1. Po kliknięciu w pozycję listy, sparuj głośnik
