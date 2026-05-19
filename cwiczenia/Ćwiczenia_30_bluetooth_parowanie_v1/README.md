@@ -260,6 +260,45 @@
     </RelativeLayout>
    ```
 
+1. Zawartość MainActivity:
+
+   ```java
+    // Inicjalizacja RecyclerView
+        RecyclerView recyclerView = findViewById(R.id.recyclerViewDevices);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        // Inicjalizacja adaptera, obsługa kliknięć na urządzenia, parowanie
+        adapter = new BluetoothDeviceAdapter(new ArrayList<DeviceModel>(), device -> {
+            // Zatrzymaj skanowanie Bluetooth
+            if (bluetoothConnectionManager != null) {
+                bluetoothConnectionManager.stopScan();
+            }
+
+            if (bluetoothAdapter != null) {
+                // 2. Pobieramy zdalne urządzenie po adresie MAC
+                BluetoothDevice remoteDevice = bluetoothAdapter.getRemoteDevice(device.getAddress());
+
+                // 3. Rozpoczynamy parowanie
+                if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.BLUETOOTH_CONNECT) == PackageManager.PERMISSION_GRANTED) {
+                    int bondState = remoteDevice.getBondState();
+
+                    if (bondState == BluetoothDevice.BOND_NONE) {
+                        // Urządzenie nie jest sparowane - parujemy
+                        boolean success = remoteDevice.createBond();
+                        if (success) {
+                            Toast.makeText(getApplicationContext(), "Parowanie z: " + device.getName(), Toast.LENGTH_SHORT).show();
+                        }
+                    } else if (bondState == BluetoothDevice.BOND_BONDED) {
+                        // Urządzenie już jest sparowane - możesz spróbować się połączyć (Connect)
+                        Toast.makeText(getApplicationContext(), "Urządzenie już jest sparowane!", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
+        });
+
+        recyclerView.setAdapter(adapter);
+   ```
+
 1. Obsługa przycisków, np.:
 
    ```java
