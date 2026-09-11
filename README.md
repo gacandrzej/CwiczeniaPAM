@@ -4,6 +4,7 @@
 
 - [Projekt_zaliczeniowy-SQLite_v2](cwiczenia/Projekt_zaliczeniowy-SQLite_v2/README.md)
 - [Ćwiczenia_0_powtorka_v1](cwiczenia/Ćwiczenia_0_powtorka_v1/README.md)
+- [Ćwiczenia_1_layoty_wstep](/cwiczenia/Ćwiczenia_1_layouty_wstep/README.md)
 - [Ćwiczenia_2_androidstudio-linearlayout_v2](cwiczenia/Ćwiczenia_2_androidstudio-linearlayout_v2/README.md)
 - [Ćwiczenia_3_android_studio-relative_layout_v2](cwiczenia/Ćwiczenia_3_android_studio-relative_layout_v2/README.md)
 - [Ćwiczenia_4_i_5_android_studio-OnClick_Menu_Log_Toast_v5](cwiczenia/Ćwiczenia_4_i_5_android_studio-OnClick_Menu_Log_Toast_v5/README.md)
