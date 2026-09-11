@@ -24,6 +24,8 @@ Na koniec zajęć prześlij pliki źródłowe:
 
    <https://developer.android.com/guide/topics/ui/layout/linear>
 
+   ![image3](media/layout_docs_0.png)
+
 1. Ustaw odstępy pomiędzy elementami GUI
 
 1. Otworzyć dokumentację:
@@ -41,5 +43,9 @@ Na koniec zajęć prześlij pliki źródłowe:
 1. Stwórz układ i wygląd:
 
    ![image2](media/layout_cat_1.png)
+
+1. Stwórz układ i wygląd:
+
+   ![image4](media/layout_cat_2.png)
 
 1. KONIEC.
