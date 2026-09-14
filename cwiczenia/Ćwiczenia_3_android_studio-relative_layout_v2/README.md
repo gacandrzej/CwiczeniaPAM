@@ -18,9 +18,7 @@ MainActivity.java)+ obrazek do zasobu w teams.
 
 1. Wykonaj zadanie 2 z prezentacji umieszczonej na teams.
 
-   ![image1](media/image1.png)
-
-   ![image1p](../../media/2026-09-14-16-55-49.png)
+   ![image1](media/image1.png)  ![image1p](../../media/2026-09-14-16-55-49.png)
 
 1. Dodaj Empty Activity o nazwie Zadanie3 do realizacji zadania 3 z
     prezentacji umieszczonej na teams.
