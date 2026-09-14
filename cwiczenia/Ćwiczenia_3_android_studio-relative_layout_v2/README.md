@@ -20,10 +20,14 @@ MainActivity.java)+ obrazek do zasobu w teams.
 
    ![image1](media/image1.png)
 
+   ![image1p](../../media/2026-09-14-16-55-49.png)
+
 1. Dodaj Empty Activity o nazwie Zadanie3 do realizacji zadania 3 z
     prezentacji umieszczonej na teams.
 
     ![image2](media/image2.png)
+
+    ![image2p](../../media/2026-09-14-16-55-00.png)
 
 1. Dodaj Empty Activity o nazwie TestyRelativeLayout.
 
@@ -58,8 +62,8 @@ MainActivity.java)+ obrazek do zasobu w teams.
     - wyśrodkowane po prawej
     - układ wymyślony przez Ciebie
 
-1. Ustaw odstępy pomiędzy elementami GUI: 
-   - padding, 
+1. Ustaw odstępy pomiędzy elementami GUI:
+   - padding,
    - layout_margin
 
 1. Przykładowa realizacja:
