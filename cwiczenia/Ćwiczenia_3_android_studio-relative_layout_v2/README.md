@@ -78,6 +78,24 @@ MainActivity.java)+ obrazek do zasobu w teams.
 
     <https://developer.android.com/training/basics/firstapp/starting-activity>
 
-1. Wykonaj własne ćwiczenie.
+1. Wykonaj własne ćwiczenie lub
+
+    Układ typu "Karta profilu" (Wszystko w jednym RelativeLayout)
+    Cel: Zbudowanie złożonego, nowoczesnego komponentu (np. karty użytkownika) bez zagnieżdżania układów, wykorzystując całą sieć powiązań RelativeLayout.
+
+    Treść zadania:
+    Utwórz kartę zawierającą:
+
+    - ImageView (awatar) umieszczony w lewym górnym rogu.
+
+    - TextView (imię i nazwisko) po prawej stronie awatara (layout_toRightOf).
+
+    - Drugi TextView (status) umieszczony bezpośrednio pod imieniem i nazwiskiem.
+
+    - Button (akcja np. "Obserwuj") umieszczony przy prawej krawędzi rodzica (layout_alignParentEnd), wyrównany pionowo do środka całego awatara lub karty (layout_centerVertical).
+
+    - Małą ikonę powiadomienia (np. kropkę statusu online) nałożoną w prawym dolnym rogu awatara za pomocą jednoczesnego użycia layout_alignBottom i layout_alignRight względem ImageView.
+
+   ![zadanie5](../../media/2026-09-25-09-08-56.png)
 
 1. KONIEC.🔚
