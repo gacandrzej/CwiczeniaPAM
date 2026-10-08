@@ -1,38 +1,51 @@
-![](media/image1.png)
+# Projekt zaliczeniowy - 15 marzec
+
 Widok po prawej to tylko propozycja.
+Tematyka sklepu dowolna, ale wymaga akceptacji ze strony nauczyciela.
+
+   ![image1](media/image1.png)
+
 Pomocnicze ćwiczenia do realizacji to
+
 ćwiczenia 16 i 21, które będą realizowane na zajęciach.
+
 Napisz aplikację, która:
-1\) Zapisze zamówienie użytkownika w bazie SQLite, dla zestawu
-komputerowego, użytkownik może wybrać spośród 3 pozycji dla:
-a\) komputera ( opis + zdjęcie)
-b\) klawiatury ( opis + zdjęcie)
-c\) myszki ( opis + zdjęcie)
-d\) camery internetowej lub monitora ( opis + zdjęcie)
-2\) Wyśle emaila z treścią zamówienia lub/i wyśle sms z treścią
-zamówienia.
-2')Zamówienie powinno obejmować powyższe, a dodatkowo:
-a\) cenę
-b\) datę zamówienia (format data i czas)
-c\) nazwę firmy lub imię i nazwisko zamawiającego ( nie może być puste)
-3\) Pozwoli odczytać zamówienia z pomocą ListView,
-3') Dodaj ikonę aplikacji.
-3") Należy zerować po zapisie cenę dla nowego zamówienia
-4\) Posiada menu z pozycjami na obsługę:
-a\) listy zamówień
-b\) zapisania ustawień (koszyka)
-c\) informacje o autorze programu
-d\) udostępnienie zawartości koszyka
-e\) wysłanie smsa
-5\) Zadania na ocenę bardzo dobrą ( powyższe zadania oraz ):
-a\) wersja dwujęzyczna PL/En (domyślnie polski)
-b\) wysłanie smsa z zamówieniem
-c\) zapisanie stanu zamówienia i odtworzenie (SharedPreferences,
-onRestoreInstanceState)
-d\) skróty dynamiczne ( minimum 2, najlepiej 4)
-6\) Zadania na ocenę celującą ( powyższe zadania oraz ):
-a\) logowanie do aplikacji z rejestracją
-b\) zapisanie zdjęcia w bazie w postaci Stringa i jego poprawny odczyt
-c\) udostępnienie zamówienia z menu, aplikacja do wyboru
-d\) wysłanie maila w tle
-![](media/image2.png)
+
+1. Zapisze zamówienie użytkownika w bazie SQLite, dla zestawu
+komputerowego lub własnego, użytkownik może wybrać spośród 3 pozycji dla:
+   - komputera ( opis + zdjęcie)
+   - klawiatury ( opis + zdjęcie)
+   - myszki ( opis + zdjęcie)
+   - camery internetowej lub monitora ( opis + zdjęcie)
+1. Wyśle emaila z treścią zamówienia lub/i wyśle sms z treścią
+   zamówienia.
+1. Zamówienie powinno obejmować powyższe, a dodatkowo:
+   - cenę
+   - datę zamówienia (format data i czas)
+   - nazwę firmy lub imię i nazwisko zamawiającego ( nie może być puste)
+
+1. Pozwoli odczytać zamówienia z pomocą ListView,
+
+1. Dodaj ikonę aplikacji.
+
+1. Należy zerować po zapisie cenę dla nowego zamówienia
+
+1. Posiada menu z pozycjami na obsługę:
+   - listy zamówień
+   - zapisania ustawień (koszyka)
+   - informacje o autorze programu
+   - udostępnienie zawartości koszyka
+   - wysłanie smsa
+1. Zadania na ocenę bardzo dobrą ( powyższe zadania oraz ):
+   - wersja dwujęzyczna PL/En (domyślnie polski)
+   - wysłanie smsa z zamówieniem
+   - zapisanie stanu zamówienia i odtworzenie (SharedPreferences,
+     onRestoreInstanceState)
+   - skróty dynamiczne ( minimum 2, najlepiej 4)
+1. Zadania na ocenę celującą ( powyższe zadania oraz ):
+   - logowanie do aplikacji z rejestracją
+   - zapisanie zdjęcia w bazie w postaci Stringa i jego poprawny odczyt
+   - udostępnienie zamówienia z menu, aplikacja do wyboru
+   - wysłanie maila w tle
+
+   ![image2](media/image2.png)
