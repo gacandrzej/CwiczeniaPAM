@@ -23,9 +23,6 @@ zasobu w teams.
 1. Pamiętaj, aby w pliku values\\strings.xml i values\\colors.xml
     umieścić kolory i teksty.
 
-1. Dla przycisku w pliku xml dodaj parametr onClick z metodą
-    „losujLiczby".
-
 1. Napisz metodę losujLiczby, która wylosuje 6 liczb tak jak w dużym
     totolotku ( funkcja z wykładu ).
 
@@ -68,13 +65,26 @@ zasobu w teams.
 
 1. W activity_main.xml dodaj:
 
-   ![image6](media/image6.png)
+   ```xml
+   <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorAccent"
+        />
+   ```
 
-1. Dodaj kod w MainActivity:
+1. Dodaj kod w MainActivity, ustaw pasek narzędzi tak, aby pełnił funkcję paska akcji dla tego okna aktywności:
+
+   ```java
+   setSupportActionBar(findViewById(R.id.toolbar));
+   ```
 
    ![image5](media/image5.png)
 
-1. Dla każdej pozycji utwórz metodę, sprawdź działanie z pomocą Log i Toast.
+1. Dla każdej pozycji menu utwórz metodę w klasie Algorithms, sprawdź działanie z pomocą Log i Toast.
+
+   ![algorytmy](../../media/2026-10-16-09-13-03.png)
 
 1. Dodaj Empty Views Activity o nazwie NewtonRaphson do realizacji zadania 3.
 
@@ -88,8 +98,13 @@ zasobu w teams.
 
 1. Utwórz pozycję podmenu o nazwie algorytmy z pozycjami:
 
-   * Newton-Raphson (przenieś)
-   * MonteCarlo z realizacją algorytmu podanego na wykładzie.
+   * Newton-Raphson
+   * MonteCarlo
+   * sortowanie przez zliczanie
+
+   ![podmenu](../../media/2026-10-16-09-19-59.png)
+
+   ![podmenu2](../../media/2026-10-16-09-21-12.png)
 
 1. Zapewnij, aby menu pojawiło się w każdej z aktywności.
 
