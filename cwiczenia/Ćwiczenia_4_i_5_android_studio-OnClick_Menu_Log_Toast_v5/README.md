@@ -48,7 +48,7 @@ zasobu w teams.
 1. Dodaj do activity_main.xml potrzebne komponenty (Np. EditText do
     pobierania wartości itd.)
 
-   ![menu2](../../media/2026-10-16-08-47-26.png)
+   ![menu3](../../media/2026-10-16-08-54-41.png)
 
 1. Utwórz menu z pięcioma pozycjami:
 
@@ -83,9 +83,8 @@ zasobu w teams.
 
     Realizacja samego algorytmu w aktywności NewtonRaphson.
 
+   ![nr_liczba](../../media/2026-10-16-08-56-08.png)
    ![image7](media/image7.png)
-
-   ![image8](media/image8.png)
 
 1. Utwórz pozycję podmenu o nazwie algorytmy z pozycjami:
 
