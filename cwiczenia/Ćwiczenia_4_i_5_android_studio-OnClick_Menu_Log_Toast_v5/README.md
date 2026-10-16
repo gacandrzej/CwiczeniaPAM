@@ -94,8 +94,7 @@ zasobu w teams.
     Realizacja samego algorytmu w aktywności NewtonRaphson.
 
    ![nr_liczba](../../media/2026-10-16-08-56-08.png)
-   ![image7](media/image7.png)
-
+   ![wynik_NR](../../media/2026-10-16-09-33-27.png)
 1. Utwórz pozycję podmenu o nazwie algorytmy z pozycjami:
 
    * Newton-Raphson
