@@ -35,26 +35,27 @@ zasobu w teams.
 
    New - \> Directory )
 
-   ![image1](media/image1.png)
+   ![stuktura](../../media/2026-10-16-08-06-35.png)
 
-1. Utwórz plik o nazwie menu_alg Menu Resource File. ( prawy przycisk
+1. Utwórz plik o nazwie menu1 Menu Resource File. ( prawy przycisk
     myszy na res/menu )
 
 1. Do tworzenia menu wykorzystaj z dokumentacji plik \*.xml oraz
-    metody(utwórz je z pomocą CTRL+o):
+    metody, utwórz je z pomocą `CTRL+o`:
     * onCreateOptionsMenu
     * onOptionsItemSelected
 
 1. Dodaj do activity_main.xml potrzebne komponenty (Np. EditText do
     pobierania wartości itd.)
 
-   ![image2](media/image2.png)
+   ![menualg](../../media/2026-10-16-08-12-47.png)
 
-1. Utwórz menu z czterema pozycjami:
+1. Utwórz menu z pięcioma pozycjami:
 
-   * losuj ( z punktu 6, duży totolotek, materiał z wykładu)
+   * losuj ( duży totolotek, materiał z wykładu)
    * Newton-Raphson ( dla pierwiastka kwadratowego, materiał z wykładu )
-   * sortuj ( liczby całk. Sztuk 50, sortowanie **przez zliczanie** , materiał z wykładu)
+   * Monte-Carlo ( wartość liczby pi, materiał z wykładu)
+   * sortowanie przez zliczanie ( liczby całk. Sztuk 50, materiał z wykładu)
    * o autorze (wykorzystaj AlertDialog
 
       ![image3](media/image3.png)
@@ -64,14 +65,6 @@ zasobu w teams.
    <https://developer.android.com/reference/android/app/AlertDialog.Builder>
 
    <https://developer.android.com/develop/ui/views/components/dialogs>
-
-1. Do pliku gradle.properties dodaj o ile korzystasz z wersji gradle
-    8.0.0 lub wyższej oraz
-
-   ![image4](media/image4.png)
-
-   korzystasz z switch case w metodzie
-   onOptionsItemSelected
 
 1. W activity_main.xml dodaj:
 
@@ -83,7 +76,7 @@ zasobu w teams.
 
 1. Dla każdej pozycji utwórz metodę, sprawdź działanie z pomocą Log i Toast.
 
-1. Dodaj Empty Activity o nazwie NewtonRaphson do realizacji zadania 3.
+1. Dodaj Empty Views Activity o nazwie NewtonRaphson do realizacji zadania 3.
 
 1. Pobierz od użytkownika liczbę do pierwiastkowania i precyzję
     obliczeń i przekaż je do aktywności NewtonRaphson z pomocą putExtra.
