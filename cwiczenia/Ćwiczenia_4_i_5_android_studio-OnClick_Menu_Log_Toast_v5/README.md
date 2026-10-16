@@ -111,8 +111,55 @@ zasobu w teams.
 
 1. Zapewnij powrót z każdej aktywności za
     pomocą strzałki powrotnej.
+
+   ```java
+    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+   ```
+
 1. Dodatkowe zadania:
    * dodaj pozycję sortowanie przez kopcowanie
    * inne podane przez nauczyciela
+
+1. Dodaj testy dla wszystkich metod z klasy Algorithms, np.:
+
+   ```java
+   public class AlgorithmsTest {
+    private Algorithms algorithms;
+
+    @Before
+    public void setUp() {
+        algorithms = new Algorithms();
+    }
+
+    @After
+    public void tearDown() throws Exception {
+        algorithms=null;
+    }
+
+    @Test
+    public void testNewtonRaphson_basicSquareRoot() {
+        double result = algorithms.newtonRaphson(25.0, 0.0001);
+        assertEquals(5.0, result, 0.001);
+    }
+     @Test
+    public void testMonteCarlo_piApproximation() {
+        double result = algorithms.monteCarlo(1_000_000);
+        assertTrue(result > 3.0 && result < 3.3);
+    }
+
+    @Test
+    public void testRandom6_uniqueNumbers() {
+        String output = algorithms.random6();
+        assertNotNull(output);
+    }
+
+    @Test
+    public void testCountingSort_returnsSortedList() {
+        List<Integer> input = Arrays.asList(5, 2, 1, 3, 2);
+        List<Integer> result = algorithms.countingSort(input);
+
+        assertEquals(Arrays.asList(1, 2, 2, 3, 5), result);
+    }
+   ```
 
 1. KONIEC. 🔚
