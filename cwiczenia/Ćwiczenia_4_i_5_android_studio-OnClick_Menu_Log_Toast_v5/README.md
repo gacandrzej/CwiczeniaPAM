@@ -48,7 +48,7 @@ zasobu w teams.
 1. Dodaj do activity_main.xml potrzebne komponenty (Np. EditText do
     pobierania wartości itd.)
 
-   ![menualg](../../media/2026-10-16-08-12-47.png)
+   ![menu2](../../media/2026-10-16-08-47-26.png)
 
 1. Utwórz menu z pięcioma pozycjami:
 
