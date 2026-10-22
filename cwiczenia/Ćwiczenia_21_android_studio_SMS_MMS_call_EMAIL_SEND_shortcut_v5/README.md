@@ -38,7 +38,36 @@ w teams.
 
 1. Stwórz metodę wysyłającą sms poprzez SmsManagera, np.:
 
+   Java:
+
    ![image4](media/image4.png)
+   
+   Kotlin:
+   ```java
+   private fun sendWithSmsManager() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.SEND_SMS)
+            == PackageManager.PERMISSION_GRANTED
+        ) {
+            val phoneNumber = formPhone.text.toString()
+            val message = formContent.text.toString()
+
+            if (phoneNumber.isNotEmpty() && message.isNotEmpty()) {
+                smsSender.sendText(phoneNumber, message)
+                Toast.makeText(this, "Message sent.", Toast.LENGTH_LONG).show()
+                formPhone.text.clear()
+                formContent.text.clear()
+            } else {
+                Toast.makeText(
+                    this,
+                    "Phone number and message content can't be empty!",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+        } else {
+            Toast.makeText(this, "SEND_SMS permission denied.", Toast.LENGTH_LONG).show()
+        }
+    }
+   ```
 
 1. Przetestuj aplikację, np.:
 
