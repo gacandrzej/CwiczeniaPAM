@@ -138,6 +138,33 @@ w teams.
 
      ![image19](media/image19.png)
 
+     ```java
+     private fun sendMultipartSms() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.SEND_SMS)
+            == PackageManager.PERMISSION_GRANTED
+        ) {
+            val phoneNumber = formPhone.text.toString()
+            val message = formContent.text.toString()
+
+            if (phoneNumber.isNotEmpty() && message.isNotEmpty()) {
+                val parts = smsSender.divideMessage(message)
+                smsSender.sendMultipart(phoneNumber, parts)
+                Toast.makeText(this, "Multipart message sent.", Toast.LENGTH_LONG).show()
+                formPhone.text.clear()
+                formContent.text.clear()
+            } else {
+                Toast.makeText(
+                    this,
+                    "Phone number and message content can't be empty!",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+        } else {
+            Toast.makeText(this, "SEND_SMS permission denied.", Toast.LENGTH_LONG).show()
+        }
+     }
+     ```
+
    - zaimplementuj wysyłanie mmsa
    - zapisanie przychodzących smsów i wyświetlenie w menu na RecycledView
 
