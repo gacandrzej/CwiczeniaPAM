@@ -41,8 +41,9 @@ w teams.
    Java:
 
    ![image4](media/image4.png)
-   
+
    Kotlin:
+
    ```java
    private fun sendWithSmsManager() {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.SEND_SMS)
@@ -79,7 +80,7 @@ w teams.
 
 1. Stwórz metodę wysyłającą sms poprzez Intent, np.:
 
-   ![image8](media/image8.png)
+   <!--  ![image8](media/image8.png) -->
 
 1. Wyślij mail poprzez Intent, np.:
 
@@ -91,7 +92,7 @@ w teams.
 
 1. Dodaj klasę MyReceiver.java rozszerz ją o BroadcastReceiver
 
-   ![image11](media/image11.png)
+   <!--  ![image11](media/image11.png) -->
 
 1. Możesz zapisać w onReceive() przychodzące smsy do pliku
 
