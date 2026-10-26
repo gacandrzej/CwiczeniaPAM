@@ -4,7 +4,7 @@ Na koniec zajęć prześlij pliki źródłowe (.xml, .java)+ obrazek do zasobu
 w teams.
 
 1. Utwórz projekt o nazwie MySmsMailShortcut na podstawie Empty
-    Activity, dobierz odpowiednie API ( 28 -- Android 9).
+   Views Activity, dobierz odpowiednie API ( 28 -- Android 9).
 
 1. Otwórz dokumentację:
 
