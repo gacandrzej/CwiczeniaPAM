@@ -3,8 +3,7 @@
 Na koniec zajęć prześlij pliki źródłowe (.xml, .java)+ obrazek do zasobu
 w teams.
 
-1. Utwórz projekt o nazwie GpsMaps na podstawie Empty Activity, dobierz
-    odpowiednie API ( min. 26).
+1. Utwórz projekt o nazwie GpsMaps na podstawie Empty Views Activity, dobierz odpowiednie API ( min. 28 ).
 
 1. Otworzyć dokumentację:
 
@@ -107,8 +106,11 @@ w teams.
 
    ![image22](media/image22.png)
 
-1. Dodaj obligatoryjnie menu górne:( opis i objaśnienie w punkcie 25)
+1. Dodaj obligatoryjnie menu, zalecane railway navigation :( opis i objaśnienie w punkcie 25)
 
+   <https://m3.material.io/components/navigation-rail/guidelines>
+
+   ![railway](../../media/2026-11-09-11-10-08.png)
    ![image23](media/image23.png)
 
 1. Dodaj metodę sprawdzającą dostęp do GPS i internetu (colory czerwony
@@ -131,12 +133,12 @@ w teams.
 
      ![image28](media/image28.png)
 
-   ![image29](media/image29.png)
-
 1. Dodatkowe zadanie: wczytaj dane
     pogodowe dla obecnej lokalizacji:
 
-    ![image30](media/image30.png)
+   ![image29](media/image29.png)
+
+   ![image30](media/image30.png)
 
    ![image31](media/image31.png)
 
