@@ -19,6 +19,8 @@ zasobu w teams.
 
     <https://m3.material.io/components/switch/overview>
 
+    <https://m3.material.io/components/time-pickers/overview>
+
 1. Pamiętaj, aby w pliku values\\strings.xml i values\\colors.xml
     umieścić kolory i teksty.
 
