@@ -121,9 +121,17 @@ w teams.
 
 1. Zaimplementuj LocationListener z potrzebnymi metodami:
 
-   ![image14](media/image14.png)
+   ```java
+   public class MainActivity extends AppCompatActivity implements LocationListener {
+   @Override
+    public void onLocationChanged(@NonNull Location location) {
 
-   ![image15](media/image15.png)
+        updateMap(location);
+
+        Toast.makeText(this, "Location updated", Toast.LENGTH_SHORT).show();
+    }
+   }
+   ```
 
 1. Przetestuj aplikację, uruchom na urządzeniu. Przemieść się .
 
