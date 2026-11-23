@@ -69,7 +69,10 @@ w teams.
 
 1. W AndroidManifest.xml sprawdź czy masz uprawnienia:
 
-   ![image10](media/image10.png)
+   ```xml
+   <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+   ```
 
 1. Add permission check ( if z checkSelfPermission doda się
     automatycznie po wybraniu tej opcji)
