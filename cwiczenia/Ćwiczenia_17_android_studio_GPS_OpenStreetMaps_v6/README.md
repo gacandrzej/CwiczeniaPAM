@@ -107,7 +107,17 @@ w teams.
 
 1. Sprawdź czy wypisujesz odczyty:
 
-   ![image13](media/image13.png)
+   ```java
+   private void updateMap(Location location) {
+        // Pobranie współrzędnych
+        latitudeD = location.getLatitude();
+        longitudeD = location.getLongitude();
+
+        // Aktualizacja tekstów w interfejsie
+        latitude.setText(String.format("Latitude: %s", latitudeD));
+        longitude.setText(String.format("Longitude: %s", longitudeD));
+        archivaldata.setText(String.format("%s %s   :   %s\n", archivaldata.getText(), latitudeD, longitudeD));
+   ```
 
 1. Zaimplementuj LocationListener z potrzebnymi metodami:
 
