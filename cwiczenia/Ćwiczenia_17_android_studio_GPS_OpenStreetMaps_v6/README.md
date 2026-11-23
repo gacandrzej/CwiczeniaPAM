@@ -77,9 +77,28 @@ w teams.
 1. Add permission check ( if z checkSelfPermission doda się
     automatycznie po wybraniu tej opcji)
 
-   W trakcie realizacji ćwiczeń należy dodać stosone inne, wymagane uprawnienia!!!
+   W trakcie realizacji ćwiczeń należy dodać stosowne inne, wymagane uprawnienia!!!
 
-   ![image11](media/image11.png)
+   ```java
+   LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
+   if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, permissions, 1);
+            return;
+        }
+   String bp = locationManager.getBestProvider(criteria, true);
+        Log.i("AN", "onCreate: " + bp);
+
+        bestprovider.setText(String.format("Best provider: %s", bp));
+
+        if (bp != null) {
+            locationManager.requestLocationUpdates(
+                    bp,
+                    1000,
+                    1,
+                    this
+            );
+   ```
 
 1. Sprawdź czy zaimplementowałeś/aś metodę
     onRequestPermissionResult, np.:
