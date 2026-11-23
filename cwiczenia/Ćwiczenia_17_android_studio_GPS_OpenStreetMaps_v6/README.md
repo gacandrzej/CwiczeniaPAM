@@ -42,7 +42,22 @@ w teams.
 
 1. Zadeklaruj w MainActivity.java:
 
-   ![image7](media/image7.png)
+   ```java
+   SwipeRefreshLayout swipeRefreshLayout;
+
+    private final String[] permissions = {
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.ACCESS_COARSE_LOCATION,
+            Manifest.permission.INTERNET
+    };
+    private TextView longitude;
+    private TextView latitude;
+    private TextView archivaldata;
+    private TextView text_network;
+    private TextView text_gps;
+    private MapView map;
+    private MapController mapController;
+   ```
 
 1. W onCreate() dodaj:
 
