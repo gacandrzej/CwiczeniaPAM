@@ -180,6 +180,20 @@ w teams.
 
    ![image22](media/image22.png)
 
+   lub po nowemu:
+
+   ```java
+    Drawable drawable = getResources().getDrawable(R.drawable.marker, null);
+        Bitmap bitmap = Bitmap.createScaledBitmap(
+                ((BitmapDrawable) drawable).getBitmap(),
+                35,
+                35,
+                true
+        );
+        drawable = new BitmapDrawable(getResources(), bitmap);
+        marker.setIcon(drawable);
+   ```
+
 1. Dodaj obligatoryjnie menu, zalecane railway navigation :( opis i objaśnienie w punkcie 25)
 
    <https://m3.material.io/components/navigation-rail/guidelines>
