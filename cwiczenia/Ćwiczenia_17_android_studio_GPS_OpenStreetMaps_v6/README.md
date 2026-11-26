@@ -184,13 +184,13 @@ w teams.
 
    <https://m3.material.io/components/navigation-rail/guidelines>
 
-   ![railway](../../media/2026-11-09-11-10-08.png)
+   ![railway](../../media/2026-11-26-13-54-39.png)
    ![image23](media/image23.png)
 
 1. Dodaj metodę sprawdzającą dostęp do GPS i internetu (colory czerwony
     i zielony na TextView)
 
-   ![image24](media/image24.png)
+   ![nowy2](../../media/2026-11-26-14-00-31.png)
 
 1. Wykonaj zadania
    - wysłanie sms-em koordynat
@@ -216,6 +216,17 @@ w teams.
 
    ![image31](media/image31.png)
 
-   ![image32](media/image32.png)
+   ![pogoda1](../../media/2026-11-26-13-56-19.png)
+1. Dla chętnych skorzystaj z retrofit2:
+
+   ```xml
+     dependencies {
+       implementation("androidx.activity:activity-ktx:1.13.0")
+       // Retrofit
+       implementation("com.squareup.retrofit2:retrofit:3.0.0")
+       // konwerter Gson do automatycznego zamieniania JSONa na obiekty Java
+       implementation("com.squareup.retrofit2:converter-gson:3.0.0")
+     }
+   ```
 
 1. KONIEC.🔚
