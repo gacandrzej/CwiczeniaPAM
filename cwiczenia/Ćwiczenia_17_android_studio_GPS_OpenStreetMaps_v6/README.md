@@ -145,6 +145,22 @@ w teams.
 
    ![image18](media/image18.png)
 
+   Zmieniamy dostawcę kafelek od roku 2026:
+
+   ```java
+   XYTileSource cyclOSM = new XYTileSource(
+                "CyclOSM",
+                0, 20, 256, ".png",
+                new String[]{
+                        "https://a.tile-cyclosm.openstreetmap.fr/cyclosm/",
+                        "https://b.tile-cyclosm.openstreetmap.fr/cyclosm/",
+                        "https://c.tile-cyclosm.openstreetmap.fr/cyclosm/"
+                },
+                "© OpenStreetMap contributors, CyclOSM"
+        );
+        map.setTileSource(cyclOSM);
+   ```
+
 1. Dodanie punktu:
 
    ![image19](media/image19.png)
