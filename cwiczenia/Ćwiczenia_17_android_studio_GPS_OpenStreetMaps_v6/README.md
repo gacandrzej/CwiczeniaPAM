@@ -74,6 +74,14 @@ w teams.
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
    ```
 
+1. Sprawdź czy zaimplementowałeś/aś metodę
+    onRequestPermissionResult, albo lepiej dodaj launcher:
+
+   ```java
+   private final ActivityResultLauncher<String[]> requestMultiplePermissionsLauncher =
+            registerForActivityResult(new ActivityResultContracts.RequestMultiplePermissions(),
+   ```
+
 1. Add permission check ( if z checkSelfPermission doda się
     automatycznie po wybraniu tej opcji)
 
@@ -83,7 +91,7 @@ w teams.
    LocationManager locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
    if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
                 && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, permissions, 1);
+            requestMultiplePermissionsLauncher.launch(permissions);
             return;
         }
    String bp = locationManager.getBestProvider(criteria, true);
@@ -99,11 +107,6 @@ w teams.
                     this
             );
    ```
-
-1. Sprawdź czy zaimplementowałeś/aś metodę
-    onRequestPermissionResult, np.:
-
-   ![image12](media/image12.png)
 
 1. Sprawdź czy wypisujesz odczyty:
 
